@@ -15,7 +15,8 @@ jobs:
 
     - name: Archive repository
       run: |
-        zip -r ARDAudiothek.zip . -x "*.github/*"
+        --zip -r ARDAudiothek.zip . -x "*.github/*"
+        zip -r ARDAudiothek.zip ARDAudiothek
         
     - name: Generate checksum
       run: |
