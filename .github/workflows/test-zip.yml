@@ -22,8 +22,11 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
-         name: ARDAudiothek
-         run-id: ${{ github.run_id }}
+        name: ARDAudiothek
+        path: ARDAudiothek/
      
     - name: Generate SHA1  
-      run: sha1sum ARDAudiothek
+      run: |
+        cd ARDAudiothek
+        sha1sum ARDAudiothek.zip > checksum.txt
+
