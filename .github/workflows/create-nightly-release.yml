@@ -3,7 +3,7 @@ name: Zip Repo and Generate Checksum
 on:
   push:
     branches:
-      - develop
+      - workflow
 
 jobs:
   build:
