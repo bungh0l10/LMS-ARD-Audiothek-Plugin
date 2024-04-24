@@ -22,7 +22,7 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
-         name: ARDAudiothek.zip
+         name: ARDAudiothek
          run-id: ${{ github.run_id }}
      
     - name: Generate SHA1  
