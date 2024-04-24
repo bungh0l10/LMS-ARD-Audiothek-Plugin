@@ -28,7 +28,7 @@ jobs:
     - name: Generate SHA1  
       run: |
           cd downloaded_artifact
-          sha1sum ARDAudiothek.zip | awk '{print $1}' > checksum.txt
+          sha1sum ARDAudiothek | awk '{print $1}' > checksum.txt
           sed -i "s/checksum/$(cat checksum.txt)/g" repo.xml
 
     - name: Get SHA for artifact
