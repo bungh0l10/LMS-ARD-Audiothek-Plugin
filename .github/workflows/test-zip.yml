@@ -12,9 +12,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - run: zip -r ARDAudiothek.zip ARDAudiothek
-    - run: sha1sum ARDAudiothek.zip | awk '{print $1}'
-    - run: sha256sum ARDAudiothek.zip | awk '{print $1}'
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
