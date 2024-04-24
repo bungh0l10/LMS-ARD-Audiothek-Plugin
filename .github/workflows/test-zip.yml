@@ -18,3 +18,20 @@ jobs:
       with:
         name: ARDAudiothek
         path: ${{ github.workspace }}/ARDAudiothek/
+
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+          name: ARDAudiothek
+          path: downloaded_artifact
+          
+    - name: Generate SHA1  
+      run: |
+          cd downloaded_artifact
+          sha1sum ARDAudiothek.zip | awk '{print $1}' > checksum.txt
+          sed -i "s/checksum/$(cat checksum.txt)/g" repo.xml
+
+    - name: Get SHA for artifact
+      run: |
+          echo "SHA for the artifact: $(cat downloaded_artifact/checksum.txt)"
+
