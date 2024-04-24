@@ -24,5 +24,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: ARDAudiothek
+        name: ARDAudiothek.zip
         path: ARDAudiothek.zip
