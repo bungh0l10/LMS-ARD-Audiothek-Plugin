@@ -26,4 +26,4 @@ jobs:
          run-id: ${{ github.run_id }}
      
     - name: Generate SHA1  
-      run: sha1sum ARDAudiothek.zip
+      run: sha1sum ARDAudiothek
