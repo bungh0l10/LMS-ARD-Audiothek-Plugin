@@ -13,16 +13,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Archive repository
-      run: |
-        zip -r ARDAudiothek.zip ARDAudiothek
-        
-    - name: Generate checksum
-      run: |
-        sed -i "/checksum/{s/checksum/$(sha1sum ARDAudiothek.zip | awk '{print $1}')/}" repo.xml
-
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: ARDAudiothek.zip
-        path: ARDAudiothek.zip
+        name: ARDAudiothek
+        path: /ARDAudiothek/
