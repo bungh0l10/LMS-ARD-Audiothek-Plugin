@@ -18,7 +18,6 @@ jobs:
       with:
         name: ARDAudiothek
         path: ${{ github.workspace }}/ARDAudiothek/
-        run: sha1sum ARDAudiothek.zip
      
     - name: Download artifact
       uses: actions/download-artifact@v4
