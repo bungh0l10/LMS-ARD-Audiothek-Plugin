@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    outputs:
+      ARDAudiothek_checksum: ${{ steps.generate_checksum.outputs.checksum }}
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -19,14 +22,13 @@ jobs:
         name: ARDAudiothek
         path: ${{ github.workspace }}/ARDAudiothek/
      
-    - name: Download artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: ARDAudiothek
-        path: ARDAudiothek/
-     
-    - name: Generate SHA1  
+    - name: Generate SHA1
+      id: generate_checksum
       run: |
-        cd ARDAudiothek
-        sha1sum ARDAudiothek.zip > checksum.txt
+          echo ::set-output name=checksum::$(sha1sum ARDAudiothek.zip | awk '{print $1}')
+          sed -i "s/checksum/${{ steps.generate_checksum.outputs.checksum }}/g" repo.xml
+
+    - name: Get SHA for artifact
+      run: |
+          echo "SHA for the artifact: ${{ steps.generate_checksum.outputs.checksum }}"
 
