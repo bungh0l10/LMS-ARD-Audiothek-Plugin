@@ -3,8 +3,6 @@ updates:
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: weekly
-    day: saturday
-    time: "10:00"
+    interval: daily
   open-pull-requests-limit: 5
   target-branch: develop
