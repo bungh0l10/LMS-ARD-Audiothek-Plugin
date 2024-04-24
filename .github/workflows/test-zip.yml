@@ -18,6 +18,4 @@ jobs:
       with:
         name: ARDAudiothek
         path: ${{ github.workspace }}/ARDAudiothek/
-
-    - name: Output artifact ID
-      run:  echo 'SHA256 is ${{ steps.artifact-upload-step.outputs.sha256 }}'
+        run: sha1sum ARDAudiothek.zip
