@@ -6,6 +6,7 @@
     <description>PLUGIN_ARDAUDIOTHEK</description>
     <icon>plugins/ARDAudiothek/html/images/icon_svg.png</icon>
     <module>Plugins::ARDAudiothek::Plugin</module>
+    <optionsURL>plugins/ARDAudiothek/settings/basic.html</optionsURL>
     <homepageURL>https://github.com/mzedd/LMS-ARD-Audiothek-Plugin/</homepageURL>
     <targetApplication>
         <id>SqueezeCenter</id>
