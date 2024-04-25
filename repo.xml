@@ -3,7 +3,7 @@
         <title lang="EN">3rd-party repository for installing the ARD Audiothek plugin</title>
     </details>
     <plugins>
-        <plugin name="BUMAudiothek" version="1.3.2.1" maxTarget="*">
+        <plugin name="BUMAudiothek" version="2.0" maxTarget="*">
             <title lang="EN">BUM Audiothek</title>
             <desc lang="EN">Browse and listen to content of the ARD Audiothek.</desc>
             <changes lang="EN">v1.3.2: Bugfixes and increased image resolution.</changes>
