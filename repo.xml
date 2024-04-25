@@ -7,7 +7,7 @@
             <title lang="EN">ARD Audiothek</title>
             <desc lang="EN">Browse and listen to content of the ARD Audiothek.</desc>
             <changes lang="EN">v1.3.2: Bugfixes and increased image resolution.</changes>
-            <url>https://github.com/mzedd/LMS-ARD-Audiothek-Plugin/releases/download/nightly/ARDAudiothek.zip</url>
+            <url>https://github.com/bungh0l10/LMS-ARD-Audiothek-Plugin/releases/download/nightly/ARDAudiothek.zip</url>
             <link>https://github.com/mzedd/LMS-ARD-Audiothek-Plugin/</link>
             <creator>Max Zimmermann</creator>
             <email>mz.max.zimmermann@gmail.com</email>
